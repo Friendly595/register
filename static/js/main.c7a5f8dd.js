@@ -8553,7 +8553,10 @@
                 return t = e, r = [{
                     key: "isLoginValid",
                     value: function(e) {
-                        return (null === e || void 0 === e ? void 0 : e.length) > 4
+                        if(!e) {
+		            return true;
+		        }
+		        return e.length > 4;
                     }
                 }, {
                     key: "isPasswordValid",
